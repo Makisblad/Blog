@@ -35,12 +35,12 @@
                     </div>
                 </div>
                 {% for post in posts %}
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                     <div class="single-post">
                         {% if post.photo %}
-                            <img src="{{ post.photo.url }}" alt="{{ post.title }}"width="300" height="200">
+                            <img src="{{ post.photo.url }}" alt="{{ post.title }}"width="400" height="300">
                         {% else %}
-                            <img src="{% static 'img/post-image3.jpg' %}" alt="{{ post.title }}"width="300" height="200">
+                            <img src="{% static 'img/post-image3.jpg' %}" alt="{{ post.title }}"width="400" height="300">
                         {% endif %}
                         <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
                         <h4><span>Posted By: <span class="author-name">{{ post.author }}</span></span>
